@@ -1,22 +1,19 @@
 #基于 HTML5 实现的多人在线游戏“你画我猜”
 
 
-----------
 ##相关技术
-服务器：Node.js
-服务器框架：express
-数据传输：socket.io
-数据库：MongoDB
-图形音效：HTML5（audio、canvas、tag、websocket、）
-游戏动画：CSS3
-Javascript库：jQuery
-前端模块化：sea.js
-CSS框架：LESS
-模版引擎：Ejs
+- 服务器：Node.js
+- 服务器框架：express
+- 数据传输：socket.io
+- 数据库：MongoDB
+- 图形音效：HTML5（audio、canvas、tag、websocket、）
+- 游戏动画：CSS3
+- Javascript库：jQuery
+- 前端模块化：sea.js
+- CSS框架：LESS
+- 模版引擎：Ejs
 
 
-
-----------
 
 ##运行步骤
 
@@ -25,7 +22,6 @@ CSS框架：LESS
 3. 运行服务器：node server.js
 4. 开始游戏：http://localhost:3000
 
-------------------------
 
 ##游戏功能
 - 绘制图形
@@ -35,8 +31,6 @@ CSS框架：LESS
 - 查看在线玩家及积分
 - 注册登录
 
-
---------------------
 
 
 ### 项目结构
