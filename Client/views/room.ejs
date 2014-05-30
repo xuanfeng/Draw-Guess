@@ -1,0 +1,22 @@
+<div class="room_wrapper">
+	<div class="room_info">
+		<div class="room_title">房间信息</div>
+		<div class="room_game_start">立即开始</div>
+	</div>
+
+	<ul class="room_inner cf">
+		<% for(var i=0; i<user.length; i++){ %>
+			<li>
+				<img src="../images/avator_<%= user[i].avatorId %>.jpg" alt="">
+				<span><%= user[i].nickname %></span>
+			</li>
+		<% } %>
+		<% for(var j=0; j<4-user.length; j++){ %>
+			<li>
+				<img src="../images/avator_0.jpg" alt="">
+				<span></span>
+			</li>
+		<% } %>
+
+	</ul>
+</div>

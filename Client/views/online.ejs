@@ -1,0 +1,7 @@
+<% for(var i=0; i<user.length; i++){ %>
+	<div class="online_member">
+		<div class="avator"><img src="images/avator_<%= user[i].avatorId %>.jpg"></div>
+		<span class="nickname info"><%= user[i].nickname %></span>
+		<span class="score info">积分：<%= user[i].score %></span>
+	</div>
+<% } %>

@@ -1,0 +1,14 @@
+{
+  "name": "Draw-and-Guess",
+  "description": "A HTML5 game for xuanfeng's Graduation Design",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.6",
+    "ejs": "*",
+    "socket.io": "*"
+  }
+}

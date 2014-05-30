@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你画我猜·HTML5版本登录 - 轩枫阁</title>
+	<link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+	<div class="wrapper">
+		<section class="login_form_wrapper flip">
+			<h1 class="logo"></h1>
+			<div class="form_title cf">
+				<span class="login active">登&nbsp;&nbsp;陆</span>
+				<span class="join">注&nbsp;&nbsp;册</span>
+			</div>
+			<div class="line"></div>
+
+			<div class="transform cf">
+				<div class="form_wrap">
+					<form action="/login" method="post" class="login_form">
+						<div class="avator"><img src="images/avator_1.jpg" alt="" width="80" height="80"></div>
+						<input type="hidden" class="avator_hidden" name="avatorId" value="1">
+						<input type="text" name="nickname" class="nickname nickname_login login_input" placeholder="昵称">
+						<input type="password" name="password" class="password login_input" placeholder="密码">
+						<span class="error_tip">密码错误</span>
+						<div class="submit">
+							<input type="submit" class="submit_btn" value="登&nbsp;&nbsp;录">
+						</div>
+					</form>
+
+					<form action="/join" method="post" class="join_form">
+						<div class="avator"><img src="images/avator_1.jpg" alt="" width="80" height="80"></div>
+						<input type="hidden" class="avator_hidden" name="avatorId" value="1">
+						<input type="text" name="nickname" class="nickname login_input" placeholder="昵称">
+						<input type="password" name="password" class="password login_input" placeholder="密码">
+						<input type="password" name="repeat_password" class="repeat_password login_input" placeholder="重复密码">
+						<span class="error_tip">密码错误</span>
+						<div class="submit">
+							<input type="submit" class="submit_btn" value="注&nbsp;&nbsp;册">
+						</div>
+					</form>
+					
+				</div>
+				<div class="avator_select">
+					<div class="avator_show has_select"><i></i><img src="images/avator_1.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_2.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_3.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_4.jpg"></div>
+
+					<div class="avator_show"><i></i><img src="images/avator_5.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_6.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_7.jpg"></div>
+					<div class="avator_show"><i></i><img src="images/avator_8.jpg"></div>
+					
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer id="footer">版权所有©2014 <a href="http://www.xuanfengge.com">轩枫阁</a></footer>
+
+<script src="../js/sea.js"></script>
+<script src="../js/jquery.js"></script>
+<script>
+	seajs.use("./js/login.js", function(app){
+		app.init();
+	});
+</script>
+</body>
+</html>

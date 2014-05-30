@@ -1,0 +1,15 @@
+<% if(type == "normal"){ %>
+	<div class="chat_message type_<%= data.detail %> cf">
+		<img src="images/avator_<%= data.avatorId %>.jpg" />
+		<p class="info">
+			<span class="author"><%= data.from %></span>
+			<span class="time"><%= data.time %></span>
+		</p>
+		<p class="message"><%= data.msg %></p>
+	</div>
+<% }else{ %>
+	<div class="chat_message notice type_<%= data.detail %> cf">
+		<i class="icon"></i>
+		<p><%= data.msg %></p>
+	</div>
+<% } %>

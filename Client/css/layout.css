@@ -1,0 +1,100 @@
+body {
+  font: 14px/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2b2b2b;
+  overflow: visible;
+}
+a {
+  color: #39c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  *outline: none;
+}
+a:active {
+  *star: expression(this.onFocus=this.blur());
+}
+a:focus {
+  *outline: 0;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.cf {
+  display: block;
+  zoom: 1;
+}
+*html .cf {
+  height: 1%;
+}
+.cf:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cf {
+  *zoom: 1;
+}
+.placeholder {
+  color: #888888;
+}
+input::-webkit-input-placeholder {
+  color: #888888;
+}
+input::-moz-placeholder {
+  color: #888888;
+}
+textarea::-webkit-input-placeholder {
+  color: #888888;
+}
+textarea::-moz-placeholder {
+  color: #888888;
+}
+.text-autocut {
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.text-hide {
+  display: block;
+  font-size: 0;
+  text-indent: -99999em;
+  color: transparent;
+}
+.wrap {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+/* 四角的半径定制 */
+/* 用法 */
+/* Mixin */
+/* 用法 */
+/* 转换/旋转 */
+/* 用法 */
+/* 线性渐变 */
+/* 用法 */
+/* 快速渐变 */
+/* 用法 */
+/* 镜像效果 */
+/* 用法 */
+.ib {
+  display: inline-block;
+  *zoom: 1;
+  vertical-align: top;
+}

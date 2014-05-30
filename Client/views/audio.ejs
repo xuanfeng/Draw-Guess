@@ -1,0 +1,5 @@
+<% for(var i=0; i<media.audio.length; i++){ %>
+	<audio class="audio" preload="auto">
+		<source class="audio_source" src="./audio/<%= media.audio[i] %>.<%= media.type %>" type="audio/<%= media.type %>" />
+	</audio>
+<% } %>

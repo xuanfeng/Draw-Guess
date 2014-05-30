@@ -1,0 +1,20 @@
+<!-- 分数统计 -->
+<div class="score_wrapper">
+	<ul class="scrore_inner">
+		<li class="score_head">
+			<span class="score_title">总 分 榜</span>
+			<span class="score_time">倒计时：05</span>
+		</li>
+		<% for(var i=0; i<player.length; i++){ %>
+		<% count = player[i][2]*4 - player[i][3]*1 - player[i][4]*2 + player[i][5]*2 %>
+			<li>
+				<span class="score_count"><%= count %></span>
+				<img src="../images/avator_<%= player[i][1] %>.jpg" alt="">
+				<span class="score_name"><%= player[i][0] %></span>
+				<span class="score_flower icon score_tool">(<%= player[i][3] %>)</span>
+				<span class="score_egg icon score_tool">(<%= player[i][4] %>)</span>
+				<span class="score_shoe icon score_tool">(<%= player[i][5] %>)</span>
+			</li>
+		<% } %>
+	</div>
+</div>

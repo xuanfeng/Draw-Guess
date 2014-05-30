@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你画我猜·HTML5版本 - 轩枫阁</title>
+	<link rel="stylesheet" href="./css/canvas.css">
+	<link rel="stylesheet" href="./css/jquery.bigcolorpicker.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/effect.css">
+	<link rel="stylesheet" href="./css/loading.css">
+		
+</head>
+<body>
+<!-- <ul class="media">
+	<li>audio1</li>
+	<li>audio2</li>
+	<li>audio3</li>
+	<li>audio4</li>
+	<li>audio5</li>
+	<li>audio6</li>
+	<li>audio7</li>
+	<li>audio8</li>
+	<li>audio9</li>
+</ul> -->
+<div class="wrapper">
+	<header id="header">
+		<h1 class="logo">你画我猜</h1>
+		<div class="player">
+			<img class="avatorId" value="1" src="./images/avator_1.jpg" class="player_portait">
+			<span class="name" title="轩枫">轩枫</span>
+			<i class="exit icon" title="退出"></i>
+		</div>
+	</header>
+
+	<div class="loader">
+		<div class="loading">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+		<span>正在连接服务器...</span>
+	</div>  
+
+	<!-- s: #container -->
+	<div id="container" class="cf">
+		<section id="main">
+			<div class="canvas_title section_title icon">绘画板 <span class="give_up">放弃绘画</span></div>
+			<div id="content">
+				<div class="content_inner">
+
+					<ul class="content_tip">
+						<li class="li_tip icon game_tip">游戏提示</li>
+						<!-- <li class="li_tip turn_game_tip icon game_tip">绘画主题：</li> -->
+						<li class="li_tip icon game_title">房间</li>
+						<li class="li_tip icon game_time">60</li>
+					</ul>
+
+					<div id="draw">
+						<div class="draw_tool">
+							<div id="draw_logo"><i class="dot_color"></i>绘画板工具</div>
+
+							<ul class="draw_controller cf">
+								<li class="normal pencil active" title="铅笔"></li>
+								<li class="normal handwriting" title="涂鸦"></li>
+								<li class="normal linesize showLine" title="线条大小"></li>
+								<li class="normal showColor" id="chooseColor" title="选择颜色"></li>
+								<li class="normal rubber" title="橡皮擦"></li>
+
+								<span>|</span>
+
+								<li class="normal line" title="画直线"></li>
+								<li class="normal square" title="方形"></li>
+								<li class="normal circle" title="圆"></li>
+								<li class="normal fill" title="填充前景"></li>
+
+								<span>|</span>
+
+								<li class="normal cancel" title="撤销上一个操作"></li>
+								<li class="normal next" title="恢复上一个操作"></li>	
+								<li class="normal clearContext" title="清屏"></li>
+								<li class="normal downloadImage" title="下载"><a href="javascript:;" download="picture.png" id="downloadImage_a"></a></li>
+							</ul>
+
+							<ul class="draw_turn">
+								<li>
+									<img src="./images/avator_1.jpg" alt="">
+									<span>轩枫</span>
+									<span>10</span>
+								</li>
+								<li>
+									<img src="./images/avator_1.jpg" alt="">
+									<span>轩枫</span>
+									<span>10</span>
+								</li>
+								<li>
+									<img src="./images/avator_1.jpg" alt="">
+									<span>轩枫</span>
+									<span>10</span>
+								</li>
+								<li>
+									<img src="./images/avator_1.jpg" alt="">
+									<span>轩枫</span>
+									<span>10</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 线条粗细 -->
+						<div id="line_size" class="line_size normal">
+							<ul>
+								<li><button data-value="1" class="small selected"><span style="width: 2px; height: 2px;"></span></button></li>
+								<li><button data-value="3" class="small"><span style="width: 4px; height: 4px;"></span></button></li>
+								<li><button data-value="5"><span style="width: 8px; height: 8px;"></span></button></li>
+								<li><button data-value="7"><span style="width: 10px; height: 10px;"></span></button></li>
+							</ul>
+						</div>
+						<!-- #line_size -->
+
+						<!-- 绘画板 -->
+						<div class="canvas_container">
+							<canvas id="canvas">浏览器不支持canvas，请更换Chrome浏览器</canvas>
+							<canvas id="canvas_bak">浏览器不支持Canvas，请更换Chrome浏览器</canvas>
+
+
+							<!-- tool -->
+
+							<!-- 分数点评 -->
+							<!-- <div class="s_shoe">
+								<div class="s_shoe_wrapper">
+									<div class="front_shoe icon"> </div>
+									<div class="back_shoe icon"></div>
+								</div>
+								<div class="s_shoe_shadow icon"></div>
+							</div> -->
+
+							<!-- 鲜花 -->
+							<!-- <div class="s_flower icon"></div> -->
+
+							<!-- 鸡蛋 -->
+							<!-- <div class="s_egg">
+								<div class="s_egg_wrapper">
+									<div class="front_egg icon"></div>
+									<div class="back_egg icon"></div>
+								</div>
+								<div class="s_egg_shadow icon">
+									<div class="s_egg_boom icon"></div>
+								</div>
+							</div> -->
+
+
+						</div>
+
+						
+				
+						
+					</div>
+					<!-- #draw -->
+				</div>
+				<!-- .content_inner -->
+			</div>
+			<!-- #content -->
+		</section>
+
+		<section id="chat">
+			<header class="chat_title section_title icon">聊天记录</header>
+			<div class="clear_chat icon" title="清空聊天记录"></div>
+			<article class="chat_content_wrap cf">
+				<div class="chat_content_inner">
+
+				<div class="chat_message type_me cf">
+					<img src="images/avator_1.jpg" />
+					<p class="info"><span class="author">xuanfeng</span><span class="time">13:01:45</span></p>
+					<p class="message">xuanfeng：	聊天语句</p>
+				</div>
+				<div class="chat_message type_normal cf">
+					<img src="images/avator_1.jpg" />
+					<p class="info"><span class="author">xuanfeng</span><span class="time">13:01:45</span></p>
+					<p class="message">聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句</p>
+				</div>
+				<div class="chat_message type_private cf">
+					<img src="images/avator_1.jpg" />
+					<p class="info"><span class="author">xuanfeng</span><span class="time">13:01:45</span></p>
+					<p class="message">聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句聊天语句</p>
+				</div>
+				
+				<div class="chat_message notice type_right cf">
+					<i class="icon"></i>
+					<p>恭喜才对正确答案“神马”</p>
+				</div>
+				<div class="chat_message notice type_sub cf">
+					<i class="icon"></i>
+					<p>"轩枫"已经离线</p>
+				</div>
+				<div class="chat_message notice type_focus cf">
+					<i class="icon"></i>
+					<p>系统通知</p>
+				</div>
+				<div class="chat_message notice type_add cf">
+					<i class="icon"></i>
+					<p>"轩枫"已经上线</p>
+				</div>
+
+				<!-- .chat_content_inner -->
+				</div>				
+			</article>
+
+			<!-- 自定义滚动条 -->
+			 <div class="scroller-container">
+                <div class="scrollbar"></div>
+            </div>
+
+			<footer class="chat_input cf">
+				<input type="text" class="message_input" id="message_input" placeholder="输入文字，进行聊天" />
+				<input type="button" class="chat_btn" value="发送" title="ENTER快速发送">
+				<i class="show_online icon" title="查看在线人员"></i>
+			</footer>
+		</section>
+		
+		<section id="online">
+			<header class="online_title section_title icon">在线人数</header>
+			<section class="online_list">
+
+			</section>
+		</section>
+	</div>
+	<!-- e: #container -->
+
+	<footer id="footer">版权所有<a href="www.xuanfengge.com">轩枫阁</a></footer>
+</div>
+
+<!-- 分数统计 -->
+
+<!-- <script src="js/jquery-2.0.0.min.js"></script> -->
+<!-- <script src="js/jquery.bigcolorpicker.js"></script> -->
+<!-- <script src="js/socket.js"></script> -->
+<!-- <script src="js/main.js"></script> -->
+<!-- <script src="js/draw.js"></script> -->
+
+<!-- <script src="js/game.js"></script> -->
+<!-- <script src="js/chat.js"></script> -->
+<!-- <script src="js/index.js"></script> -->
+<!-- <script src="js/effect.js"></script> -->
+
+<script src="./js/sea.js"></script>
+<script src="./js/socket.js"></script>
+<script>
+	seajs.use("./js/app.js", function(app){
+		app.init();
+	});
+	seajs.config({
+		base: "./js/",
+		charset: "utf-8",
+		timeout: 20000,
+		debug: true
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,623 @@
+@charset "utf-8";
+/* CSS Document */
+/*------- reset -------*/
+/*
+Theme Name: xuanfeng
+Date:2013/10/01;
+Version:2.0;
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5标签初始化 
+--------------------------------------------------*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 标签初始化 
+--------------------------------------------------*/
+body {
+  line-height: 1;
+  color: #333;
+  font: 14px/1.5 "微软雅黑", Arial, Helvetica, Verdana, sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+  border-left: solid 4px #39c;
+  margin-left: 10px;
+  padding-left: 10px;
+  background: whitesmoke;
+  margin: 10px auto;
+  padding: 6px 10px;
+  color: #666;
+  font-size: 20px;
+}
+i {
+  font-style: normal;
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img {
+  border: 0;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+h5,
+h6 {
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+div {
+  display: block;
+}
+/* 解决Google浏览器字体不小于12px的问题
+--------------------------------------------------*/
+html {
+  -webkit-text-size-adjust: none;
+}
+a:focus {
+  outline: none;
+}
+/*让position:fixed在IE6下可用! */
+* html,
+* html body {
+  background-image: url(about:blank);
+  background-attachment: fixed;
+}
+body {
+  font: 14px/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2b2b2b;
+  overflow: visible;
+}
+a {
+  color: #39c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  *outline: none;
+}
+a:active {
+  *star: expression(this.onFocus=this.blur());
+}
+a:focus {
+  *outline: 0;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.cf {
+  display: block;
+  zoom: 1;
+}
+*html .cf {
+  height: 1%;
+}
+.cf:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cf {
+  *zoom: 1;
+}
+.placeholder {
+  color: #888888;
+}
+input::-webkit-input-placeholder {
+  color: #888888;
+}
+input::-moz-placeholder {
+  color: #888888;
+}
+textarea::-webkit-input-placeholder {
+  color: #888888;
+}
+textarea::-moz-placeholder {
+  color: #888888;
+}
+.text-autocut {
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.text-hide {
+  display: block;
+  font-size: 0;
+  text-indent: -99999em;
+  color: transparent;
+}
+.wrap {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+/* 四角的半径定制 */
+/* 用法 */
+/* Mixin */
+/* 用法 */
+/* 转换/旋转 */
+/* 用法 */
+/* 线性渐变 */
+/* 用法 */
+/* 快速渐变 */
+/* 用法 */
+/* 镜像效果 */
+/* 用法 */
+.ib {
+  display: inline-block;
+  *zoom: 1;
+  vertical-align: top;
+}
+#container {
+  display: block;
+}
+.loader {
+  display: none;
+}
+button {
+  float: left;
+  display: none;
+}
+.s_shoe {
+  width: 90px;
+  height: 200px;
+  position: absolute;
+  z-index: 99999;
+}
+.s_shoe .s_shoe_wrapper {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+}
+.s_shoe .front_shoe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+}
+.s_shoe .back_shoe {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 0px -200px;
+  overflow: hidden;
+}
+.s_shoe .s_shoe_shadow {
+  width: 70px;
+  height: 130px;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  background-position: -100px 0;
+  z-index: 96;
+  display: none;
+}
+.s_shoe {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+.s_shoe .s_shoe_wrapper {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -moz-transform 1s;
+  -o-transition: -moz-transform 1s;
+  transition: -moz-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.s_shoe .back_shoe {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+.s_shoe .front_shoe,
+.s_shoe .back_shoe {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.s_shoe .flipIt {
+  -webkit-transform: rotateX(720deg) scale(0.7);
+  -moz-transform: rotateX(720deg) scale(0.7);
+  -ms-transform: rotateX(720deg) scale(0.7);
+  -o-transform: rotateX(720deg) scale(0.7);
+  transform: rotateX(720deg) scale(0.7);
+}
+.s_flower {
+  width: 60px;
+  height: 120px;
+  position: absolute;
+  z-index: 99999;
+  background-position: -180px 0px;
+  -webkit-animation-name: flower;
+  -webkit-animation-duration: 1.6s;
+  /*动画持续时间*/
+  -webkit-animation-iteration-count: 1;
+  /*定义循环资料，infinite为无限次*/
+  -webkit-animation-timing-function: linear;
+  /*动画频率*/
+}
+@-webkit-keyframes flower {
+  0% {
+    -webkit-transform: translateY(0px) scale(1.4);
+    transform: translateY(0px) scale(1.4);
+  }
+  10% {
+    -webkit-transform: translateY(-10px) scale(1.3);
+    transform: translateY(-10px) scale(1.3);
+  }
+  20% {
+    -webkit-transform: translateY(-30px) scale(1.2);
+    transform: translateY(-30px) scale(1.2);
+  }
+  30% {
+    -webkit-transform: translateY(-50px) scale(1.1);
+    transform: translateY(-50px) scale(1.1);
+  }
+  40% {
+    -webkit-transform: translateY(-70px) scale(1);
+    transform: translateY(-70px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(-30px) scale(1);
+    transform: translateY(-30px) scale(1);
+  }
+  60% {
+    -webkit-transform: translateY(0px) scale(1);
+    transform: translateY(0px) scale(1);
+  }
+  80% {
+    -webkit-transform: translateY(80px) scale(0.8);
+    transform: translateY(80px) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateY(200px) scale(0.4);
+    transform: translateY(200px) scale(0.4);
+  }
+}
+.s_egg {
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  z-index: 99999;
+}
+.s_egg .s_egg_wrapper {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+}
+.s_egg .front_egg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: -240px 0;
+}
+.s_egg .back_egg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: -240px -120px;
+  overflow: hidden;
+}
+.s_egg .s_egg_shadow {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  background-position: -330px 0;
+  z-index: 96;
+  display: none;
+}
+.s_egg .s_egg_boom {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-position: -338px -80px;
+}
+.s_egg {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+.s_egg .s_egg_wrapper {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -moz-transform 1s;
+  -o-transition: -moz-transform 1s;
+  transition: -moz-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.s_egg .back_egg {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+.s_egg .front_egg,
+.s_egg .back_egg {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.s_egg .flipIt {
+  -webkit-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+  -moz-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+  -ms-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+  -o-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+  transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+}
+.score_wrapper {
+  position: absolute;
+  top: 300px;
+  left: 400px;
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+}
+.score_wrapper .score_head {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: whitesmoke;
+}
+.score_wrapper .score_head .score_title {
+  line-height: 40px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.score_wrapper .score_head .score_time {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 80px;
+  color: #ccc;
+}
+.score_wrapper .scrore_inner {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.score_wrapper li {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-bottom: solid 1px #E4E4E4;
+  border-top: solid 1px #FFF;
+}
+.score_wrapper li:nth-child(even) {
+  background: #f5f5f5;
+}
+.score_wrapper li:nth-child(odd) {
+  background: #fff;
+}
+.score_wrapper .score_count {
+  float: left;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-size: 18px;
+  line-height: 80px;
+  color: #d62629;
+}
+.score_wrapper .score_count::after {
+  content: "分";
+  color: #333;
+  font-size: 14px;
+}
+.score_wrapper img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 10px 0 0 0;
+  border: solid 1px #39c;
+  box-shadow: 0 0 4px #39c;
+}
+.score_wrapper .score_name {
+  float: left;
+  font-size: 14px;
+  line-height: 80px;
+  color: #333;
+  margin: 0 40px 0 10px;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.score_wrapper .score_flower {
+  background-position: -330px -230px;
+}
+.score_wrapper .score_egg {
+  background-position: -325px -340px;
+}
+.score_wrapper .score_shoe {
+  background-position: -318px -280px;
+}
+.score_wrapper .score_tool {
+  float: left;
+  width: 60px;
+  height: 40px;
+  margin: 20px 12px auto 0px;
+  line-height: 40px;
+  text-indent: 30px;
+}
+.wrapper #header .player {
+  display: block;
+}

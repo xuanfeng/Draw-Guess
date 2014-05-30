@@ -1,0 +1,284 @@
+@import "include/reset.less";
+@import "include/layout.less";
+
+body{
+	background: url(../images/login_bg.jpg); 
+}
+
+.wrapper{
+	width: 360px;
+	// height: 290px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	margin-left: -180px;
+	margin-top: -150px;
+}
+
+.login_form_wrapper{
+	width: 360px;
+	// height: 290px;
+	position: relative;
+	background: rgba(255, 255, 255, 0.3);
+
+	.logo{
+		width: 190px;
+		height: 110px;
+		position: absolute;
+		z-index: -1;
+		top: 20px;
+		left: 90px;
+		background: url(../images/login_logo.png);
+	}
+	.form_title{
+		width: 215px;
+		margin: 0 auto;
+		padding-top: 70px;
+
+		span{
+			width: 80px;
+			display: inline-block;
+			font-family: "Microsoft Yahei";
+			font-size: 16px;
+			line-height: 24px;
+			color: #ccc;
+			text-align: center;
+			cursor: pointer;
+		}
+		.login{
+			float: left;
+		}
+		.join{
+			float: right;
+		}
+		.active{
+			color: #FFF;
+			border-bottom: solid 3px #00b6fa;
+		}
+	}
+	.line{
+		width: 340px;
+		height: 1px;
+		margin-left: 10px;
+		margin-top: 0px;
+		background: #FFF;
+		&::before{
+			content: "";
+			width: 340px;
+			height: 1px;
+			background: #5f5f5f;
+			position: absolute;
+			margin-top: -1px;
+		}
+	}
+}
+
+.form_wrap{
+	position: relative;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	// display: none;
+	z-index: 22;
+}
+.login_form, .join_form{
+	width: 100%;
+	height: auto;
+	margin: 30px auto 10px auto;
+	overflow: hidden;
+
+	.avator{
+		float: left;
+		width: 80px;
+		height: 80px;
+		border: solid 1px #FFF;
+		border-radius: 4px;
+		margin: auto 20px auto 10px;
+		cursor: pointer;
+		img{
+			border-radius: 4px;
+		}
+	}
+	.login_input{
+		float: left;
+		width: 225px;
+		height: 28px;
+		border: solid 1px #00b6fa;
+		outline: none;
+		z-index: 12;
+		position: relative;
+		margin-bottom: 24px;
+		background: rgba(255, 255, 255, 0.2);
+		font-family: "Microsoft Yahei";
+		color: #FFF;
+		padding: 0 4px;
+		box-shadow: 0 0 6px rgba(0, 80, 240, 1);
+	}
+	.repeat_password{
+		float: right;
+		margin-right: 14px;
+	}
+	input::-webkit-input-placeholder {color:#FFF;}
+	input::-moz-placeholder{color:#FFF;}
+	textarea::-webkit-input-placeholder {color:#FFF;}
+	textarea::-moz-placeholder{color:#FFF;}
+
+	.error_tip{
+		position: absolute;
+		left: 112px;
+		bottom: 60px;
+		color: #000;
+		display: none;
+
+		&::before{
+			color: #FFF;
+			content: "●";
+			margin-right: 4px;
+		}
+	}
+}
+
+.join_form{
+	display: none;
+	.login_input{
+		margin-bottom: 10px;
+	}
+}
+
+.submit{
+	float: left;
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	.gradient(top, rgba(208, 213, 214, 0.2), rgba(0, 0, 0, 0.1));
+
+	.submit_btn{
+		width: 154px;
+		height: 34px;
+		margin: 10px 100px;
+		border: solid 1px #bbbdc2;
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+		border-radius: 3px;
+		.gradient(top, #fdfffd, #e8eff2);
+		color: #2d0a69;
+		font-family: "Microsoft Yahei";
+		font-size: 14px;
+		outline: none;	
+		.transition(0.4s);
+		&:hover{
+			border: solid 1px #00a5fc;
+			box-shadow: inset 0 0 4px rgba(0, 165, 252, 0.8);
+		}
+		&:focus{
+			-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+			.gradient(top, #c3d5e4, #fcfdfd);
+		}
+	}
+}
+
+
+.avator_select{
+	width: 100%;
+	overflow: hidden;
+	padding-top: 10px;
+	margin-left: -8px;
+	position: absolute;
+	top: 0px;
+	z-index: 22;
+
+	.avator_show{
+		float: left;
+		width: 76px;
+		height: 76px;
+		border: solid 1px #FFF;
+		border-radius: 4px;
+		margin: 6px 4px;
+		position: relative;
+
+		img{
+			width: 76px;
+			height: 76px;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	}
+	.has_select{
+		border: solid 1px #14b9d6;
+		box-shadow: 0 0 4px rgba(20, 185, 214, 0.6);
+		i{
+			position: absolute;
+			top: -8px;
+			right: -4px;
+			width: 20px;
+			height: 20px;
+			background: url(../images/success.png);
+		}
+	}
+}
+
+#footer{
+	width: 100%;
+	position: fixed;
+	bottom: 80px;
+	color: #ccc;
+	line-height: 24px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.transform{
+	position: relative;
+	z-index: 99;
+}
+
+/*
+ * CSS3 Flip
+ */
+.flip {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.flip .transform {
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -ms-transition: -moz-transform 1s;
+    -o-transition: -moz-transform 1s;
+    transition: -moz-transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flip .avator_select {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flip .form_wrap, .flip .avator_select {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip .flipIt {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+

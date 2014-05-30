@@ -1,0 +1,343 @@
+@import "include/reset.less";
+@import "include/layout.less";
+
+
+#container{
+	display: block;
+}
+.loader{
+	display: none;
+}
+button{
+	float: left;
+	display: none;
+}
+
+// 拖鞋
+.s_shoe{
+	width: 90px;
+	height: 200px;
+	position: absolute;
+	z-index: 99999;
+
+	.s_shoe_wrapper{
+		position: absolute;
+		display: block;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 98;
+	}
+	.front_shoe{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-position: 0 0;
+	}
+	.back_shoe{
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-position: 0px -200px;
+		overflow: hidden;
+	}
+	.s_shoe_shadow{
+		width: 70px;
+		height: 130px;
+		position: absolute;
+		top: 25px;
+		left: 15px;
+		background-position: -100px 0;
+		z-index: 96;
+		display: none;
+	}
+}
+
+// CSS3-3D动画部分
+.s_shoe{
+	.perspective(800px);
+}
+.s_shoe .s_shoe_wrapper{
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -ms-transition: -moz-transform 1s;
+    -o-transition: -moz-transform 1s;
+    transition: -moz-transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.s_shoe .back_shoe{
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.s_shoe .front_shoe, .s_shoe .back_shoe {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.s_shoe .flipIt{
+    -webkit-transform: rotateX(720deg) scale(0.7);
+    -moz-transform: rotateX(720deg) scale(0.7);
+    -ms-transform: rotateX(720deg) scale(0.7);
+    -o-transform: rotateX(720deg) scale(0.7);
+    transform: rotateX(720deg) scale(0.7);
+}
+.s_flower{
+	width: 60px;
+	height: 120px;
+	position: absolute;
+	z-index: 99999;
+	background-position: -180px 0px;
+
+	-webkit-animation-name: flower;
+	-webkit-animation-duration: 1.6s;/*动画持续时间*/
+    -webkit-animation-iteration-count: 1;/*定义循环资料，infinite为无限次*/
+    -webkit-animation-timing-function: linear;/*动画频率*/
+}
+
+@-webkit-keyframes flower{
+	0% {
+		-webkit-transform: translateY(0px) scale(1.4);
+		transform: translateY(0px) scale(1.4);
+	}
+	10%{
+		-webkit-transform: translateY(-10px) scale(1.3);
+		transform: translateY(-10px) scale(1.3);
+	}
+	20%{
+		-webkit-transform: translateY(-30px) scale(1.2);
+		transform: translateY(-30px) scale(1.2);
+	}
+	30%{
+		-webkit-transform: translateY(-50px) scale(1.1);		
+		transform: translateY(-50px) scale(1.1);		
+	}
+	40%{
+		-webkit-transform: translateY(-70px) scale(1.0);
+		transform: translateY(-70px) scale(1.0);
+	}
+	50% {
+		-webkit-transform: translateY(-30px) scale(1.0);
+		transform: translateY(-30px) scale(1.0);
+	}
+	60%{
+		-webkit-transform: translateY(0px) scale(1.0);
+		transform: translateY(0px) scale(1.0);
+	}
+	80%{
+		-webkit-transform: translateY(80px) scale(0.8);
+		transform: translateY(80px) scale(0.8);
+	}
+	100% {
+		-webkit-transform: translateY(200px) scale(0.4);
+		transform: translateY(200px) scale(0.4);
+	}
+}
+
+// 鸡蛋
+.s_egg{
+	width: 100px;
+	height: 120px;
+	position: absolute;
+	z-index: 99999;
+
+	.s_egg_wrapper{
+		position: absolute;
+		display: block;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 98;
+	}
+	.front_egg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-position: -240px 0;
+	}
+	.back_egg{
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-position: -240px -120px;
+		overflow: hidden;
+	}
+	.s_egg_shadow{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 25px;
+		left: 10px;
+		background-position: -330px 0;
+		z-index: 96;
+		display: none;
+	}
+	.s_egg_boom{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-position: -338px -80px;
+	}
+}
+
+// CSS3-3D动画部分
+.s_egg{
+	.perspective(800px);
+}
+.s_egg .s_egg_wrapper{
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -ms-transition: -moz-transform 1s;
+    -o-transition: -moz-transform 1s;
+    transition: -moz-transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.s_egg .back_egg{
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.s_egg .front_egg, .s_egg .back_egg {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.s_egg .flipIt{
+    -webkit-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+    -moz-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+    -ms-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+    -o-transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+    transform: rotateX(360deg) rotateY(0deg) scale(0.5);
+}
+
+
+
+
+
+// 分数
+.score_wrapper{
+	position: absolute;
+	top: 300px;
+	left: 400px;
+	height: auto;
+	padding: 10px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.4);
+
+	.score_head{
+		width: 100%;
+		height: 40px;
+		position: relative;
+		background: whitesmoke;
+
+		.score_title{
+			line-height: 40px;
+			font-size: 18px;
+			color: #333;
+			text-align: center;
+			width: 100%;
+			display: inline-block;
+		}
+		.score_time{
+			position: absolute;
+			right: 8px;
+			top: 8px;
+			width: 80px;
+			color: #ccc;
+		}
+	}
+
+	.scrore_inner{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	li{
+		width: 100%;
+		height: 80px;
+		background: #fff;
+		border-bottom: solid 1px #E4E4E4;
+		border-top: solid 1px #FFF;
+
+		&:nth-child(even){
+			background: #f5f5f5;
+		}
+		&:nth-child(odd){
+			background: #fff;
+		}
+	}
+
+	.score_count{
+		float: left;
+		width: 80px;
+		height: 60px;
+		text-align: center;
+		margin: 10px 0 0 0;
+		font-size: 18px;
+		line-height: 80px;
+		color: #d62629;
+		&::after{
+			content: "分";
+			color: #333;
+			font-size: 14px;
+		}
+	}
+	img{
+		float: left;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0 0 0;
+		border: solid 1px #39c;
+		box-shadow: 0 0 4px #39c;
+	}
+	.score_name{	
+		float: left;
+		font-size: 14px;
+		line-height: 80px;
+		color: #333;
+		margin: 0 40px 0 10px;
+		max-width: 100px;
+		.text-autocut();
+	}
+	.score_flower{
+		background-position: -330px -230px;
+	}
+	.score_egg{
+		background-position: -325px -340px;
+	}
+	.score_shoe{
+		background-position: -318px -280px;
+	}
+	.score_tool{
+		float: left;
+		width: 60px;
+		height: 40px;
+		margin: 20px 12px auto 0px; 
+		line-height: 40px;
+		text-indent: 30px;
+	}
+
+}
+
+.wrapper #header .player{
+	display: block;
+}
