@@ -1,75 +1,74 @@
-## 实时客户端
+#基于 HTML5 实现的多人在线游戏“你画我猜”
 
-基于Html5实现
+
+----------
+##相关技术
+服务器：Node.js
+服务器框架：express
+数据传输：socket.io
+数据库：MongoDB
+图形音效：HTML5（audio、canvas、tag、websocket、）
+游戏动画：CSS3
+Javascript库：jQuery
+前端模块化：sea.js
+CSS框架：LESS
+模版引擎：Ejs
+
+
+
+----------
+
+##运行步骤
+
+1. 软件安装：Git、NodeJs、MongoDB
+2. 运行数据库：mongod
+3. 运行服务器：node server.js
+4. 开始游戏：http://localhost:3000
+
+------------------------
+
+##游戏功能
+- 绘制图形
+- 聊天猜关键字
+- 私信聊天
+- 使用道具打分
+- 查看在线玩家及积分
+- 注册登录
+
+
+--------------------
+
 
 ### 项目结构
 
-- **Server** 存放与服务器交互的后台代码
+- **Client**：客户端文件
+    - **audio**: 音效文件
+    - **css**: LESS编译后的样式文件
+    - **images**：图片文件
+    - **js**：前端逻辑文件
+        - **app.js**：客户端入口文件
+        - **chat.js**：聊天功能
+        - **connect.js**：与服务器数据交互(中转站)
+        - **draw.js**：绘画操作
+        - **effect.js**：道具点评特效
+        - **ejs.js**：Ejs模板引擎
+        - **jquery.bigcolorpicker.js**：颜色选取组件
+        - **jquery.cookie.js**：cookie操作函数
+        - **jquery.js**：jquery库
+        - **json2.js**：json操作函数
+        - **login.js**：登录处理
+        - **main.js**：游戏主逻辑
+        - **scrollbar.js**：聊天窗口滚动条处理函数
+        - **sea.js**：seajs模块化
+        - **socket.js**：socket.io库文件
+    - **less**：LESS源文件
+    - **views**：Ejs模版文件        
 
-- **Client** 前端页面
-
-    - js 存放javascript等脚本
-
-    - css 存放css样式表
-
-    - img 存放项目相关的图片
-
-- **Docs** 项目开发文档， 统一采用markdown语法编写. 每开发一个新项目需要更新相应的文档
-
-- **Test** 测试目录，用于日常开发的测试所需.
-
-    - js
-
-    - img
-
-    - css
-
-    - html html文件存放在此
-
-- **index.html** 入口文件，也是主要的显示界面, 就目前来说应该就这个一个html文件.
-
-### 开发相关
-
-1. Node.js做后台
-
-2. 前端主要技术HTML5
-
-### 项目进展
-
-#### 2013-08-17
-
-1. 聊天功能(80%)
-
-2. PPT划线
-
-#### 2013-08-20
-
-1. 音视频功能
-
-2. 聊天功能
-
-#### 2013-08-23
-
-1. PPT显示
-
-2. PPT翻页
-
-3. 在线列表
-
-#### 2013-08-27
-
-1. 使用cluster模块实现多进程服务器
-
-2. 实现子进程自动重启
-
-### 计划方向
-
-1. 流媒体
-
-2. 音视频
-
-3. PPT直播, js的PDF解码器，带滑动效果
-
-4. 在线列表
-
-5. 初步开始提供注册功能，有头像，用户id，名称。
+- **Server** 与服务器交互的后台代码
+    - **node_modules**：node模块
+    - **config.js**：服务器相关配置
+    - **controller.js**：服务器controller控制层-业务逻辑
+    - **dbdao.js**：服务器dao层-数据库操作
+    - **gameword.js**：游戏关键词数据
+    - **package.json**：项目信息
+    - **server.js**：服务器入口及主代码

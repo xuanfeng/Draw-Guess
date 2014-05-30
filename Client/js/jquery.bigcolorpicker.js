@@ -1,4 +1,11 @@
-﻿define(function(require, exports, module){
+﻿/*
+ * @ 颜色选取组件
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
+define(function(require, exports, module){
 	var $ = require("jquery");
 
 // (function($){

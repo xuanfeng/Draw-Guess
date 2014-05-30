@@ -1,3 +1,11 @@
+/*
+ * @ 登录处理
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
+
 define(function(require, exports, module){
 	var $ = require("jquery"),
 		JSON = require("json2");

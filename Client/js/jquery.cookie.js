@@ -1,3 +1,10 @@
+/*
+ * @ cookie操作函数
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 define(function(require, exports, module){
 	var $ = require("jquery");
 

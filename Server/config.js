@@ -1,3 +1,10 @@
+/*
+ * @ “你画我猜”服务器相关配置
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 exports.debug = true;
 exports.port = 3000;
 exports.email = "845207036@qq.com";

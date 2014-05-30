@@ -1,3 +1,10 @@
+/*
+ * @ Ejs模板引擎
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 define(function(require, exports, module){
 
 var rsplit = function(string, regex) {

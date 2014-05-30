@@ -2,7 +2,9 @@
  * @ 聊天窗口滚动条处理函数
  * @ xuanfeng
  * @ 2013-02-05
- * */
+ * 
+ */
+
 define(function(require, exports, module){
     var $ = require("jquery"),
         io = require("socket"),

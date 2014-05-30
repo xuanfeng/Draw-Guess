@@ -1,3 +1,10 @@
+/*
+ * @ 服务器controller控制层-业务逻辑
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 
 var config = require("./config");
 var db = require("./dbdao");

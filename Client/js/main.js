@@ -1,3 +1,12 @@
+/*
+ * @ 游戏主逻辑
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
+
+
 define(function(require, exports, module){
 	var $ =require("jquery"),
 		io = require("socket"),

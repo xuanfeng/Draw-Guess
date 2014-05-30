@@ -1,3 +1,10 @@
+/*
+ * @ 道具点评特效
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 define(function(require, exports, module){
 	var $ = require("jquery");
 	// 拖鞋

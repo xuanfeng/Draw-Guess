@@ -1,3 +1,10 @@
+/*
+ * @ socket.io库文件
+ * @ xuanfeng
+ * @ 2013-02-05
+ * 
+ */
+
 define(function(require, exports, module){
 
 

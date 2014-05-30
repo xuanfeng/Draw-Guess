@@ -1,3 +1,10 @@
+/*
+ * @ 服务器dao层-数据库操作
+ * @ xuanfeng
+ * @ 2013-04-19
+ * 
+ */
+
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
