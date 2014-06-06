@@ -19,7 +19,7 @@
 
 1. 软件安装：Git、NodeJs、MongoDB
 2. 运行数据库：mongod
-3. 运行服务器：node server.js
+3. 运行服务器：node app.js
 4. 开始游戏：http://localhost:3000
 
 
